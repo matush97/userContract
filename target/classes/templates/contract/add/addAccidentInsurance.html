@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>user add</title>
+</head>
+<body>
+<h1 style="margin: 10px;">Add Injury</h1>
+<form th:action="@{'/contract/add/addAccidentInsurance/' + ${id}}"  th:object="${accidentInsurance}" method="post">
+
+    <label for="id">ID</label>
+    <input type="number" id="id" th:field="*{id}" readonly/>
+    <p th:if="${#fields.hasErrors('id')}" th:errors="*{id}"></p>
+    <br>
+
+    <label for="startDate">Date of formation</label>
+    <input type="date" id="startDate1" th:field="*{date}"/>
+    <p th:if="${#fields.hasErrors('date')}" th:errors="*{date}"></p>
+    <br>
+
+    <label for="startDate">Start Date</label>
+    <input type="date" id="startDate" th:field="*{startDate}"/>
+    <p th:if="${#fields.hasErrors('startDate')}" th:errors="*{startDate}"></p>
+    <br>
+
+    <label for="endDate">End Date</label>
+    <input type="date" id="endDate" th:field="*{endDate}"/>
+    <p th:if="${#fields.hasErrors('endDate')}" th:errors="*{endDate}"></p>
+    <br>
+
+    <label for="monthlyPayment">Monthly pay</label>
+    <input type="number" id="monthlyPayment" th:field="*{monthlyPayment}" />
+    <p th:if="${#fields.hasErrors('monthlyPayment')}" th:errors="*{monthlyPayment}"></p>
+    <br>
+
+    <label for="dailyPayment">Death pay</label>
+    <input type="number" id="dailyPayment" th:field="*{dailyPayment}" />
+    <p th:if="${#fields.hasErrors('dailyPayment')}" th:errors="*{dailyPayment}"></p>
+    <br>
+
+    <label for="insured">Indemnity Amount</label>
+    <input type="number" id="insured" th:field="*{insured.name}" />
+    <p th:if="${#fields.hasErrors('insured')}" th:errors="*{insured}"></p>
+    <br>
+
+    <label for="consequencesAccident">Monthly pay</label>
+    <input type="number" id="consequencesAccident" th:field="*{consequencesAccident}" />
+    <p th:if="${#fields.hasErrors('consequencesAccident')}" th:errors="*{consequencesAccident}"></p>
+    <br>
+
+
+
+    <label for="deathAccident">Permanent Injury pay</label>
+    <input type="number" id="deathAccident" th:field="*{deathAccident}" />
+    <p th:if="${#fields.hasErrors('deathAccident')}" th:errors="*{deathAccident}"></p>
+    <br>
+
+
+
+    <label>Territory</label>
+    <select name="territory">
+        <option th:each="territory: ${typeProperties}"
+                th:value="${territory}"
+                th:text="${territory.getName()}"></option>
+    </select>
+    <br>
+
+
+    <input type="submit" value="Submit" style="width: fit-content;"/>
+
+</form>
+</body>
+</html>

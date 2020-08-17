@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>Contract</title>
+</head>
+<body>
+<h1 style="margin: 10px;">Add house or apartman contract</h1>
+<form th:action="@{'/contract/add/addHouseApartman/' + ${id}}"  th:object="${houseApartmantInsurance}" method="post">
+
+    <label for="id">ID</label>
+    <input type="number" id="id" th:field="*{id}" readonly/>
+    <p th:if="${#fields.hasErrors('id')}" th:errors="*{id}"></p>
+    <br>
+
+    <label for="startDate">Date of formation</label>
+    <input type="date" id="startDate1" th:field="*{date}"/>
+    <p th:if="${#fields.hasErrors('date')}" th:errors="*{date}"></p>
+    <br>
+    <label for="startDate">Insurance start date</label>
+    <input type="date" id="startDate" th:field="*{startDate}"/>
+    <p th:if="${#fields.hasErrors('startDate')}" th:errors="*{startDate}"></p>
+    <br>
+
+    <label for="endDate">Insurance end date</label>
+    <input type="date" id="endDate" th:field="*{endDate}" />
+    <p th:if="${#fields.hasErrors('endDate')}" th:errors="*{endDate}"></p>
+    <br>
+    <label for="monthlyPayment">The amount of the monthly payment in €</label>
+    <input type="number" id="monthlyPayment" th:field="*{monthlyPayment}" />
+    <p th:if="${#fields.hasErrors('monthlyPayment')}" th:errors="*{monthlyPayment}"></p>
+    <br>
+
+    <label for="amaunt">Amount of insurance indemnity in €</label>
+    <input type="number" id="amaunt" th:field="*{amaunt}" />
+    <p th:if="${#fields.hasErrors('amaunt')}" th:errors="*{amaunt}"></p>
+    <br>
+
+
+
+
+
+    <label>Type of property</label>
+    <select name="typeProperty">
+        <option th:each="typeProperty: ${typeProperties}"
+                th:value="${typeProperty}"
+                th:text="${typeProperty.getName()}"></option>
+    </select>
+    <p th:if="${#fields.hasErrors('typeProperty')}" th:errors="*{typeProperty}"></p>
+    <br>
+
+    <label for="PSC">PSC</label>
+    <input type="text" id="PSC" th:field="*{adress.PSC}" />
+    <p th:if="${#fields.hasErrors('adress.PSC')}" th:errors="*{adress.PSC}"></p>
+    <br>
+
+    <label for="City name">City name</label>
+    <input type="text" id="City name" th:field="*{adress.cityName}" />
+    <p th:if="${#fields.hasErrors('adress.cityName')}" th:errors="*{adress.cityName}"></p>
+    <br>
+
+    <label for="Street name">Street name</label>
+    <input type="text" id="Street name" th:field="*{adress.streetName}" />
+    <p th:if="${#fields.hasErrors('adress.streetName')}" th:errors="*{adress.streetName}"></p>
+    <br>
+    <label for="House number">House number</label>
+    <input type="text" id="House number" th:field="*{adress.houseNumber}" />
+    <p th:if="${#fields.hasErrors('adress.houseNumber')}" th:errors="*{adress.houseNumber}"></p>
+    <br>
+
+    <label for="value">Value of property</label>
+    <input type="number" id="value" th:field="*{valueProperty}" />
+    <p th:if="${#fields.hasErrors('valueProperty')}" th:errors="*{valueProperty}"></p>
+    <br>
+
+    <label for="value1">Value of household equipment €: </label>
+    <input type="number" id="value1" th:field="*{valueHouseholdEquipment}" />
+    <p th:if="${#fields.hasErrors('valueHouseholdEquipment')}" th:errors="*{valueHouseholdEquipment}"></p>
+    <br>
+
+    <input type="submit" value="Submit" style="width: fit-content;"/>
+
+</form>
+</body>
+</html>
