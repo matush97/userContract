@@ -43,5 +43,5 @@ danej zmluve editovať jednotlivé informácie.
 
 
 
-Pri mojích zmluvách mi  fungujú všetky tie požiadavky pre zmluvu len pre "Zmluvu pre dom a apartman" (teda pridanie, úprava, zobrazenie detailov zmluvy, úprava existujúcej zmluvy).
+Pri mojích zmluvách mi  fungujú všetky tie požiadavky len pre zmluvu   "Zmluva pre dom a apartmán" (teda pridanie, úprava, zobrazenie detailov zmluvy, úprava existujúcej zmluvy).
 Pre ostané 3  zmluvy mi funguje len založenie novej zmluvy. Túto časť plánujem ešte dorobiť . 
