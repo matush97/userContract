@@ -2,7 +2,7 @@
 Users and Contracts 
 
 Pomocou jazyka Java a frameworku Spring Boot sme mali spraviť  webové používateľské rozhranie.
-Používal som tuna aj Spring MVC.
+Používal som  Spring MVC.
 
 
 
