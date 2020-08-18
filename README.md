@@ -2,6 +2,9 @@
 Users and Contracts 
 
 Pomocou jazyka Java a frameworku Spring Boot sme mali spraviť  webové používateľské rozhranie.
+Používal som tuna aj Spring MVC.
+
+
 
 Popis vhodných HTML elementov sme mohli používať zo školského dokumentu.
 Webové rozhranie má umožniť používateľovi vykonávať nasledovné operácie:
